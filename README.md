@@ -22,8 +22,8 @@ After that, process waits in the queue to regain its mutex and then returns `0`.
 
 ## Signals
 Incoming signals are immediately handled in compliancy with registered by process handling procedures. 
-If process was waiting for mutex, then after handling the signal it will resume waiting. 
-If it was waiting for event, then it ignores whether the event happened or not and waits only for mutex to be free (spurious wakeup).
+If process was waiting for a mutex, then after handling the signal it will resume waiting. 
+If it was waiting for an event, then it ignores whether the event happened or not and waits only for mutex to be free (spurious wakeup).
 Mutexes owned by dying processes are instantly unlocked.
 
 
